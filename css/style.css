@@ -176,6 +176,46 @@ html {
 .border-w-5 {
   border-width: 5px; }
 
+.nav-link {
+  font-size: large;
+}
+
+p .btn-primary {
+  margin-top: 40px;
+  border-radius: 12px;
+}
+.box-92819 {
+  max-width: 768px; 
+  margin: 0 auto; 
+  text-align: center; 
+  padding: 20px;
+  overflow: visible;
+  margin-top: 5px;
+}
+
+.home-h1 {
+  white-space: normal;
+  word-wrap: break-word; 
+}
+
+
+.hero-img {
+  height: 400px;
+}
+
+form .form-radio .radio {
+  display: flex;
+  align-items: center; /* Vertically aligns items */
+}
+
+.radio {
+  margin-right: 15px; /* Add some space between the radio buttons */
+}
+
+.fill-control-description {
+  margin-left: 5px; /* Space between the radio button and its label */
+}
+
 .primary-black--hover {
   background: #00a651;
   color: #fff; }
@@ -467,7 +507,7 @@ h1, h2, h3, h4, h5,
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
   padding: 1rem; }
