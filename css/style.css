@@ -314,6 +314,7 @@ p .btn-primary {
 .impact-container {
   background-color: green;
   margin-top: 70px;
+  padding-bottom: 15px !important;
   border-radius: 16px;
 }
 
