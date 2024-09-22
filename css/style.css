@@ -180,6 +180,12 @@ html {
   font-size: large;
 }
 
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 p .btn-primary {
   margin-top: 40px;
   border-radius: 12px;
@@ -202,6 +208,121 @@ p .btn-primary {
 .hero-img {
   height: 400px;
 }
+
+.text-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; 
+  padding: 20px;
+}
+
+.text-flex .top-text {
+  align-self: flex-start; /* Stick to the top */
+  margin-bottom: auto;
+  margin-top: -23px !important;
+  margin-left: -75px;
+}
+
+.text-flex .number {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: -107px !important;
+}
+
+.text-flex .bottom-text {
+  align-self: flex-end; /* Stick to the bottom */
+}
+
+.served-over {
+  font-size: 27px !important;
+}
+
+.lives-in {
+  font-size: 25px !important;
+  font-weight: bold;
+  margin-left: -100px !important;
+}
+
+.counter-wrap {
+  position: relative; /* For vertical separator */
+  padding: 20px;
+  text-align: center;
+}
+
+.counter-wrap .block-18 {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* Add vertical separators */
+.counter-wrap + .counter-wrap::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 0;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent white line */
+}
+
+/* Ensure the container row respects the flex layout */
+.row.no-gutters {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 0;
+  padding: 0; 
+}
+
+.counter-wrap {
+  margin: 0 !important; 
+  padding: 0 !important; 
+}
+
+.container {
+  padding: 0 !important; 
+}
+
+/* Optional: You can also use this if additional padding exists */
+.block-18 {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.block-18 h3, 
+.block-18 p {
+  margin: 0;
+  padding: 0;
+}
+
+#section-counter {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+#first-section {
+  margin-right: -85px !important;
+}
+
+.impact-container {
+  background-color: green;
+  margin-top: 70px;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .text-flex .number {
+    font-size: 2rem; /* Adjust number size for smaller screens */
+  }
+}
+
 
 form .form-radio .radio {
   display: flex;

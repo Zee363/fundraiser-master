@@ -405,5 +405,29 @@ jQuery(document).ready(function($) {
 	counter();
 
 
+	$(document).ready(function () {
+    var counter = $(".number");
+
+    counter.each(function () {
+      var $this = $(this),
+        countTo = $this.attr("data-number");
+
+      $({ countNum: $this.text() }).animate(
+        { countNum: countTo },
+        {
+          duration: 5000, // Adjust the duration for a slower animation (5000 = 5 seconds)
+          easing: "linear",
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          },
+        }
+      );
+    });
+  });
+
+
 
 });
