@@ -2332,7 +2332,7 @@ h1, h2, h3, h4, h5,
   opacity: 0; }
 
 .block-20 {
-  overflow: hidden;
+  margin-top: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
