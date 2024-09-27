@@ -289,9 +289,11 @@ p .btn-primary {
 }
 
 /* Optional: You can also use this if additional padding exists */
-.block-18 {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  .block-18 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures space is distributed evenly */
+    height: 100%; /* Ensure it takes the full height of the parent */
 }
 
 .block-18 h3, 
@@ -341,6 +343,10 @@ form .form-radio .radio {
 .fill-control-description {
   margin-left: 5px; /* Space between the radio button and its label */
 }
+
+.hero-h1 {
+  font-family: 'Poppins', serif !important;
+} 
 
 .gallery-h1 {
   font-family: "Caveat", seif;

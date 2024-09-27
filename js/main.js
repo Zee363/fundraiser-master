@@ -1,21 +1,77 @@
-$(".image-popup").magnificPopup({
-  type: "image",
-  closeOnContentClick: true,
-  closeBtnInside: false,
-  fixedContentPos: true,
-  mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
-  gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
-  },
-  image: {
-    verticalFit: true,
-  },
-  zoom: {
-    enabled: true,
-    duration: 300, // don't foget to change the duration also in CSS
-  },
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 1, // Number of items to display
+    loop: true, // Enable looping
+    autoplay: true, // Enable autoplay
+    autoplayTimeout: 3000, // Time between slides
+    autoplayHoverPause: true, // Pause on hover
+  });
+});
+
+$(document).ready(function () {
+  var counter = $(".number");
+
+  counter.each(function () {
+    var $this = $(this),
+      countTo = $this.attr("data-number");
+
+    $({ countNum: $this.text() }).animate(
+      { countNum: countTo },
+      {
+        duration: 5000, // Adjust the duration for a slower animation (5000 = 5 seconds)
+        easing: "linear",
+        step: function () {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function () {
+          $this.text(this.countNum);
+        },
+      }
+    );
+  });
+});
+
+$(".hero-slider").slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true,
+  centerMode: true,
+  arrows: false,
+  asNavFor: ".hero-text-slider",
+  autoplay: true,
+  pauseOnHover: false,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+
+var hero_slider = $(".hero-slider");
+
+hero_slider.on("wheel", function (e) {
+  e.preventDefault();
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick("slickPrev");
+  } else {
+    $(this).slick("slickNext");
+  }
+});
+
+hero_slider.on("click", ".slick-slide", function (e) {
+  e.preventDefault();
+  var index = $(this).data("slick-index");
+  if ($(".slick-slider").slick("slickCurrentSlide") !== index) {
+    $(".slick-slider").slick("slickGoTo", index);
+  }
 });
 
 AOS.init({
