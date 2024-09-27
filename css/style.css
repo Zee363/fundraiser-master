@@ -349,9 +349,18 @@ form .form-radio .radio {
   margin-left: 5px; /* Space between the radio button and its label */
 }
 
-.hero-h1 {
-  font-family: 'Poppins', serif !important;
+.box-92819 .home-h1 {
+  font-family: 'PT Serif', system-ui !important;
+  font-weight: 100;
+  font-style: normal;
 } 
+
+.box-92819 .home-p {
+  font-family: 'Poppins', serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: larger;
+}
 
 .gallery-h1 {
   font-family: "Caveat", seif;
